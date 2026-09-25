@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Groups Manager for Google Calendar</title>
+  <meta name="description" content="Group your Google Calendar calendars and switch between groups in one click, even with hundreds of calendars. Browser extension for Chrome, Brave and Edge.">
+  <link rel="icon" href="icon128.png">
+  <style>
+    :root { --bg: #ffffff; --soft: #f5f7fb; --fg: #1f2937; --muted: #6b7280; --line: #e5e7eb; --accent: #2563eb; --accent-fg: #fff; color-scheme: light; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #111317; --soft: #1a1d23; --fg: #e8eaed; --muted: #9aa0a6; --line: #2e3138; --accent: #7aa7ff; --accent-fg: #0b1220; color-scheme: dark; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+    a { color: var(--accent); }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+    header { padding: 18px 0; display: flex; align-items: center; gap: 10px; font-weight: 600; }
+    header img { width: 32px; height: 32px; }
+    header nav { margin-left: auto; display: flex; gap: 16px; font-weight: 400; font-size: 14px; }
+    .hero { padding: 40px 0 24px; text-align: center; }
+    .hero h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.1; margin: 0 0 14px; letter-spacing: -.5px; }
+    .hero p { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0 auto 26px; }
+    .cta { display: inline-flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .btn { display: inline-block; padding: 11px 20px; border-radius: 10px; font-weight: 600; text-decoration: none; border: 1px solid var(--line); color: var(--fg); background: var(--bg); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+    .soon { display: block; margin-top: 10px; font-size: 13px; color: var(--muted); }
+    .shot { margin: 34px auto 0; max-width: 960px; }
+    .shot img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 24px 60px rgba(0,0,0,.18); display: block; }
+    section { padding: 48px 0; }
+    h2 { font-size: 28px; margin: 0 0 18px; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .card { background: var(--soft); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+    .card h3 { margin: 0 0 6px; font-size: 17px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; max-width: 760px; margin: 0 auto; }
+    .plan { border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+    .plan.pro { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+    .plan .price { font-size: 30px; font-weight: 700; margin: 4px 0 12px; }
+    .plan .price small { font-size: 14px; font-weight: 400; color: var(--muted); }
+    .plan ul { padding-left: 20px; margin: 0; }
+    .langs { text-align: center; color: var(--muted); }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+    footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="icon128.png" alt="">
+      Groups Manager for Google Calendar
+      <nav><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="privacy.html">Privacy</a></nav>
+    </header>
+
+    <div class="hero">
+      <h1>Switch calendar groups in one click</h1>
+      <p>Group your Google Calendar calendars — teams, leagues, projects, clients — and show only the ones you need. Built for people with dozens or hundreds of calendars.</p>
+      <div class="cta">
+        <a class="btn primary" id="storeLink" href="#pricing">Add to your browser</a>
+        <a class="btn" href="#features">See features</a>
+      </div>
+      <span class="soon" id="storeSoon">Coming soon to the Chrome Web Store · Works in Chrome, Brave and Edge</span>
+      <div class="shot"><img src="screenshot-1.png" alt="Groups Manager popup showing calendar groups over a weekly calendar" width="1280" height="800"></div>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Everything you need to tame many calendars</h2>
+      <div class="grid">
+        <div class="card"><h3>One-click groups</h3><p>Show only a group's calendars. Every other calendar is hidden instantly.</p></div>
+        <div class="card"><h3>Fast mode</h3><p>Uses Google Calendar's own "Display this only" option, so switching is quick even with 100+ calendars.</p></div>
+        <div class="card"><h3>Build groups in seconds</h3><p>Filter as you type, select all results, paste a list of names, or save the current view as a group.</p></div>
+        <div class="card"><h3>Several groups at once</h3><p>Combine groups — for example Football + Basketball — in a single view.</p></div>
+        <div class="card"><h3>Automatic rules</h3><p>Add every calendar whose name contains a word. New matching calendars join automatically.</p></div>
+        <div class="card"><h3>Keyboard first</h3><p>Ctrl+K palette inside Google Calendar, Alt+1…9 for your favourite groups, and Undo.</p></div>
+        <div class="card"><h3>Multiple Google accounts</h3><p>Groups and calendar lists are kept separate for each Google account.</p></div>
+        <div class="card"><h3>Private by design</h3><p>No servers, no tracking, no ads, no access to your Google account. Everything stays in your browser.</p></div>
+      </div>
+      <div class="shot"><img src="screenshot-3.png" alt="Selecting several groups at once" width="1280" height="800" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <h2>Simple pricing</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <div class="price">0 €</div>
+          <ul>
+            <li>3 groups</li>
+            <li>One-click switching and fast mode</li>
+            <li>Undo, drag and drop, icons and colors</li>
+            <li>8 languages</li>
+          </ul>
+        </div>
+        <div class="plan pro">
+          <h3>PRO</h3>
+          <div class="price">29 € <small>one-time payment · lifetime</small></div>
+          <ul>
+            <li>Unlimited groups</li>
+            <li>Several groups at once</li>
+            <li>Automatic rules</li>
+            <li>Sync across devices</li>
+            <li>Ctrl+K palette and import</li>
+            <li>Up to 3 devices</li>
+          </ul>
+        </div>
+      </div>
+      <p class="langs">English · Español · Português · Français · Deutsch · Italiano · 日本語 · 中文</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Groups Manager for Google Calendar · <a href="mailto:luiseliriano@gmail.com">luiseliriano@gmail.com</a> · <a href="privacy.html">Privacy policy</a></span>
+      <span>Not affiliated with or endorsed by Google. Google Calendar is a trademark of Google LLC.</span>
+    </div>
+  </footer>
+</body>
+</html>
