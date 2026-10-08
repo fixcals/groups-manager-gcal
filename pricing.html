@@ -39,6 +39,10 @@
     dt { font-weight: 600; margin-top: 14px; }
     dd { margin: 4px 0 0; color: var(--muted); }
     footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 14px; margin-top: 40px; }
+    .bmc { display: inline-flex; align-items: center; gap: 8px; padding: 3px 12px 3px 3px; border: 1px solid var(--line); border-radius: 9px;
+      background: var(--bg); color: var(--fg); text-decoration: none; font-weight: 500; white-space: nowrap; vertical-align: middle; }
+    .bmc img { width: 26px; height: 26px; display: block; }
+    .bmc:hover { background: var(--soft); text-decoration: none; }
   </style>
 </head>
 <body>
@@ -124,13 +128,13 @@
         <dt>Do you store my calendar data?</dt>
         <dd>No. Your calendars and groups never leave your browser. See the <a href="privacy.html">privacy policy</a>.</dd>
         <dt>Want to support the project without PRO?</dt>
-        <dd>You can <a href="https://buymeacoffee.com/luiseliriano" target="_blank" rel="noopener">buy me a coffee ☕</a>. Thank you!</dd>
+        <dd>You can buy me a coffee. Thank you!<br><br><a class="bmc" href="https://buymeacoffee.com/luiseliriano" target="_blank" rel="noopener"><img src="bmc.svg" alt="">Buy Me a Coffee</a></dd>
         <dt>Need help?</dt>
         <dd>Write to <a href="mailto:luiseliriano@gmail.com">luiseliriano@gmail.com</a> or use the 🐞 button inside the extension.</dd>
       </dl>
     </section>
 
-    <footer>© 2026 Groups Manager for Google Calendar · <a href="privacy.html">Privacy policy</a> · <a href="https://buymeacoffee.com/luiseliriano" target="_blank" rel="noopener">☕ Buy me a coffee</a> · Not affiliated with or endorsed by Google. Google Calendar is a trademark of Google LLC.</footer>
+    <footer>© 2026 Groups Manager for Google Calendar · <a href="privacy.html">Privacy policy</a> · <a class="bmc" href="https://buymeacoffee.com/luiseliriano" target="_blank" rel="noopener"><img src="bmc.svg" alt="">Buy Me a Coffee</a> · Not affiliated with or endorsed by Google. Google Calendar is a trademark of Google LLC.</footer>
   </div>
 </body>
 </html>

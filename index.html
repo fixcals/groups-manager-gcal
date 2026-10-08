@@ -40,6 +40,10 @@
     .langs { text-align: center; color: var(--muted); }
     footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
     footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
+    .bmc { display: inline-flex; align-items: center; gap: 8px; padding: 3px 12px 3px 3px; border: 1px solid var(--line); border-radius: 9px;
+      background: var(--bg); color: var(--fg); text-decoration: none; font-weight: 500; white-space: nowrap; vertical-align: middle; }
+    .bmc img { width: 26px; height: 26px; display: block; }
+    .bmc:hover { background: var(--soft); text-decoration: none; }
   </style>
 </head>
 <body>
@@ -121,7 +125,7 @@
 
   <footer>
     <div class="wrap">
-      <span>© 2026 Groups Manager for Google Calendar · <a href="mailto:luiseliriano@gmail.com">luiseliriano@gmail.com</a> · <a href="privacy.html">Privacy policy</a> · <a href="https://buymeacoffee.com/luiseliriano" target="_blank" rel="noopener">☕ Buy me a coffee</a></span>
+      <span>© 2026 Groups Manager for Google Calendar · <a href="mailto:luiseliriano@gmail.com">luiseliriano@gmail.com</a> · <a href="privacy.html">Privacy policy</a> · <a class="bmc" href="https://buymeacoffee.com/luiseliriano" target="_blank" rel="noopener"><img src="bmc.svg" alt="">Buy Me a Coffee</a></span>
       <span>Not affiliated with or endorsed by Google. Google Calendar is a trademark of Google LLC.</span>
     </div>
   </footer>
